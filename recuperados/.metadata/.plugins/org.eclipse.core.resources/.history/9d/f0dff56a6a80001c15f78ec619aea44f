@@ -1,0 +1,28 @@
+package departamentoUML;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Departamento infor = new Departamento ("informatica" , null);
+		Departamento fol = new Departamento ("fol" , null);
+		
+		Empleado steve = new Empleado ("steve Wozniak", infor);
+		Empleado elon = new Empleado ("Elon Musk", fol);
+		
+		Empleado Luis = new Empleado ("Luis", fol);
+	
+		
+		System.out.println(infor);
+		System.out.println(steve);
+		
+		
+		@override
+		public String toString() {
+			String aux = 8
+		}
+
+	}
+
+}

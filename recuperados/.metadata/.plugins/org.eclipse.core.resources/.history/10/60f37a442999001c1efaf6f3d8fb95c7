@@ -1,0 +1,54 @@
+package ejercicioCincoPuntoCuatro;
+
+public abstract class AnimalSalvaje {
+	/*
+	 * final String NEGRO = "\033[30m"; final String ROJO = "\033[31m"; final String
+	 * VERDE = "\033[32m"; final String AMARILLO = "\033[33m"; final String AZUL =
+	 * "\033[34m"; final String PURPURA = "\033[35m"; final String CYAN =
+	 * "\033[36m"; final String WHITE = "\033[37m";
+	 */
+
+	protected String name;
+	protected float weight;
+	protected boolean bipedo = false; // hay que depurar si false=cuadrupedo
+
+	// partimos de maxima vitalidad
+	protected int vital = 10;
+	protected int clean = 4; // partimos de maxima limpieza
+
+	public AnimalSalvaje( float weight, boolean bipedo, int vital, int clean) {
+		
+		this.weight = weight;
+		this.bipedo = bipedo; // hay que depurar si false=cuadrupedo
+		this.clean = clean;
+		this.vital = vital;
+	}
+
+	public void dormir() {
+		if ((this.vital >= 2) && (this.vital <= 10)) {
+			System.out.println("...zZzzZzZzZz...zZzzZzZzZz...");
+			System.out.println("...zZzzZzZzZz...zZzzZzZzZz...");
+		}
+	}
+
+	public void nutrir() {
+		if ((this.vital) >= 5 && (this.vital <= 10)) {
+			System.out.println("...ñam.ñam.ñam...\n...ñam.ñam.ñam...");
+		}
+	}
+
+	public void aseo(Pelo pelo, int vital, int clean) { // plan simplonato, ya se liará luego
+		System.out.println(this.clean);
+		if (this.pelo.getLargo().equals(LongitudPelo.LARGO)) {
+			clean = clean + 1;
+		}
+		if (LongitudPelo.CORTO == this.pelo.getLargo()) {
+			clean = clean + 2;
+		}
+		if (LongitudPelo.SINPELO == this.pelo.getLargo()) {
+			clean = clean + 3;
+		}
+		System.out.println(this.clean);
+	}
+
+}

@@ -1,0 +1,28 @@
+package juanJesusLozanoMorenoExamenPOO;
+
+public class Asignatura {
+	
+	static String titulo;
+	static String codigo;
+	
+	Asignatura(String titulo, String codigo){
+		this.titulo=titulo;
+		this.codigo=codigo;
+	}
+	public static String getTitulo() {
+		return titulo;
+	}
+	public static String getCodigo() {
+		return codigo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo=titulo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo=codigo;
+	}
+	
+
+}
+
+

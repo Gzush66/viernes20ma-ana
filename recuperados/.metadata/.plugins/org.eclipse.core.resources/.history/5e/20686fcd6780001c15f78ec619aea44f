@@ -1,0 +1,24 @@
+package departamentoUML;
+
+public class Departamento {
+	
+	
+	private String nombre;
+	
+	private Empleado empleado;
+	private Empleado director;
+	
+	
+	
+	
+	
+	
+	
+	public Departamento (String nombre , Empleado director) {
+	this.nombre= nombre;
+	this.empleado = null;
+	this.director = director;
+	
+	}
+
+}

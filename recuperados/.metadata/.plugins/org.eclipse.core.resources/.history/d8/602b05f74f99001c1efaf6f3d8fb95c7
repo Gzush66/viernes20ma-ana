@@ -1,0 +1,72 @@
+package ejercicioCincoPuntoCuatro;
+
+public class Mamifero extends AnimalSalvaje {
+
+	private Pelo pelo;
+	private LongitudPelo longitud;
+	private FormaPelo forma;
+
+	public Mamifero( float weight, boolean bipedo, int vital, int clean, LongitudPelo longitud,
+			FormaPelo forma, Pelo pelo) {
+		super( weight, bipedo, vital, clean);
+		this.pelo = pelo;
+	}
+
+	public void aseo(Pelo pelo, int vital, int clean) {
+		System.out.println(this.clean);
+		if (this.pelo.getLargo().equals(LongitudPelo.LARGO)) {
+			clean = clean + 1;
+		}
+		if (LongitudPelo.CORTO == this.pelo.getLargo()) {
+			clean = clean + 2;
+		}
+		if (LongitudPelo.SINPELO == this.pelo.getLargo()) {
+			clean = clean + 3;
+		}
+		System.out.println(this.clean);
+	}
+
+	// quizas seria mejor poner atacar en el padre AnimalSalvaje
+	// con todo lo que conlleva, hay que trasladar esos atributos alli tambien
+
+	public void atacar(AnimalSalvaje presa) {
+		if (this.weight > (presa.weight) * 4) {
+			presa.vital = 0;
+			this.clean = this.clean - 1;
+			presa.clean = presa.clean - 1;
+		}
+
+		if (this.weight > (presa.weight) * 2) {
+			presa.vital = presa.vital - 6;
+			this.clean = this.clean - 1;
+			presa.clean = presa.clean - 1;
+		}
+
+		if (this.weight >= (presa.weight)) {
+			presa.vital = presa.vital - 3; // presa pierde vitalidad 3 niveles
+			this.clean = this.clean - 1;
+			presa.clean = presa.clean - 1;
+		}
+
+		if (this.weight < (presa.weight)) { // peso menor a la presa
+			presa.vital = presa.vital - 1; // la presa disminuye vitalidad 1
+			this.clean = this.clean - 1; // me ensucio 1 nivel
+			this.vital = this.vital - 2; // pierdo vitalidad 2 niveles
+			presa.vital = presa.vital - 1; // presa pierde vitalidad 1 nivel
+			presa.clean = presa.clean - 1; // presa se ensucia 1 nivel
+		}
+	}
+
+	public void escarbar(Pelo pelo, int clean) {
+		if (this.pelo.getLargo().equals(LongitudPelo.LARGO)) {
+			clean = clean + 3;
+		}
+		if (this.pelo.getLargo().equals(LongitudPelo.CORTO)) {
+			clean = clean + 2;
+		}
+		if (this.pelo.getLargo().equals(LongitudPelo.SINPELO)) {
+			clean = clean + 1;
+		}
+	}
+
+}

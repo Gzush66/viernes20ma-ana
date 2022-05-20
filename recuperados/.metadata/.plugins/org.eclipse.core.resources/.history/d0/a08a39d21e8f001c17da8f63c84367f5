@@ -1,0 +1,46 @@
+package ejercicioCincoPuntoTresPOO;
+import java.util.Scanner;
+
+public class PrincipalProductos {
+
+	public static void main(String[] args) {
+		
+	Scanner sc=new Scanner (System.in);
+	System.out.println("Introduzca el producto :");
+	String producto=sc.nextLine();
+	System.out.println("Introduzca el lote del producto :");
+	String lote=sc.nextLine();
+	System.out.println("Introduzca la fecha de caducidad del producto :");
+	String caducidad=sc.nextLine();
+	System.out.println("Introduzca la fecha de envasado :");
+	String envasado=sc.nextLine();
+	System.out.println("introduzca el pais de origen :");
+	String pais=sc.nextLine();
+	System.out.println("Introduzca el Nº de Resgistro Sanitario :");
+	int rss=sc.nextInt();
+	System.out.println("Introduzca la Temperatura Optima de Congelacion : ");
+	String  tempe=sc.nextLine();
+	
+	
+	
+	
+	
+	Producto aguacate = new Producto ("aguacate",00101,"25/10/2022");
+	System.out.println(aguacate);
+	Frescos patata= new Frescos ("10/02/2022","españa");
+	System.out.println(patata);
+	Refrigerados boqueron=new Refrigerados("fis9520024-MA");
+	System.out.println(boqueron);
+	Congelados fletan =new Congelados("-25ºC";)
+	System.out.println(fletan);
+	
+			
+		
+		
+		
+		
+		
+		
+		
+	}
+}

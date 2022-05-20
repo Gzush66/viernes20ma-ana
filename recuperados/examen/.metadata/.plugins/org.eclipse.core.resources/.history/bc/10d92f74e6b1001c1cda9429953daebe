@@ -1,0 +1,10 @@
+package vierneslinkedList;
+
+public class PrincipalAnimal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

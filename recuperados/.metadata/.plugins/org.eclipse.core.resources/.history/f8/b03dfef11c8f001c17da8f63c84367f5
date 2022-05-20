@@ -1,0 +1,9 @@
+package ejercicioCincoPuntoTresPOO;
+
+public class PrincipalProductos {
+
+	public static void main(String[] args) {
+		
+		
+	ProductosAlmacenados atunFresco=new ProductosAlmacenados (001,"atun fresco",123,10,4 );
+}

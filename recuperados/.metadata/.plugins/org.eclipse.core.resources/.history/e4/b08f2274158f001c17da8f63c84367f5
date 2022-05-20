@@ -1,0 +1,57 @@
+package ejercicioCincoPuntoTresPOO;
+
+public class Congelados extends Producto {
+	
+			private float tempCongelacion;	
+			String codNacional;
+			String paisOrigen;
+			public String codigoNacion(String paisOrigen) {
+			if (paisOrigen== "España") {
+				final String codNacional="ESP";
+				} 
+				else {
+				final  String codNacional="INTER";				
+				}
+			return codNacional;
+			}
+			
+			
+			
+			public  Congelados(String nombre,int lote ,String caducidad, float tempCongelacion, String paisOrigen) {
+				super (nombre,lote,caducidad);
+				this.tempCongelacion=tempCongelacion;
+				this.paisOrigen= paisOrigen;
+			}
+				
+					
+			
+			
+			
+			
+			
+			public float getTempCong() {
+			return this.tempCongelacion;
+			}
+			
+			public void setTempCong (float tempCongelacion) {
+			this.tempCongelacion=tempCongelacion;
+			
+			}
+			
+			
+			
+			
+			
+				
+				
+				 
+			 @Override
+				public String toString() {
+					return "Producto: "+this.nombre+"\n"+
+					"Fecha caducidad: "+this.caducidad  +"\n"+
+					"Numero de lote :"+this.lote;
+				}
+				
+				 	
+			
+}

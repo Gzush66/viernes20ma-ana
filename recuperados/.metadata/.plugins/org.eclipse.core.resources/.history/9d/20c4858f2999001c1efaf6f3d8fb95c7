@@ -1,0 +1,15 @@
+package ejercicioCincoPuntoCuatro;
+
+public class PrincipalAnimalSalvaje {
+
+	public static void main(String[] args) {
+		
+		
+		Mamifero elefante = new Mamifero(200,false,10,4,CORTO) ;
+			
+		}
+		
+
+	}
+
+}

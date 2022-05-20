@@ -1,0 +1,70 @@
+1
+package ejercicioPOOcincopuntouno3;
+
+import ejercicioPOOcincopuntouno1.Coordenada2D;
+
+public class Rectangulo {
+
+	private Coordenada2D esquinaSuperior;
+	private Coordenada2D esquinaOpuesta;
+
+	public Rectangulo(Coordenada2D esquinaSuperior, Coordenada2D esquinaOpuesta) {
+		this.esquinaSuperior = esquinaSuperior;
+		this.esquinaOpuesta = esquinaOpuesta;
+
+	}
+
+	public void getEsquinaSuperior(Coordenada2D esquinaSuperior) {
+		this.esquinaSuperior = esquinaSuperior;
+		
+	}
+
+	public void getEsquinaOpuesta(Coordenada2D esquinaOpuesta) {
+		this.esquinaOpuesta = esquinaOpuesta;
+		
+	
+	}
+
+	public void setEsquinaSuperior(Coordenada2D esquinaSuperior) {
+		this.esquinaSuperior = esquinaSuperior;
+	}
+
+	public void setEsquinaOpuesta(Coordenada2D esquinaOpuesta) {
+		this.esquinaOpuesta = esquinaOpuesta;
+	}
+
+	public int Perimetro() {
+		return ((this.esquinaOpuesta.getX() - this.esquinaSuperior.getX())
+				+ (this.esquinaOpuesta.getY() - this.esquinaSuperior.getY())) * 2;
+	}
+
+	public int area() {
+		return ((this.esquinaOpuesta.getX() - this.esquinaSuperior.getX())
+				* (this.esquinaOpuesta.getY() - this.esquinaSuperior.getY()));
+	}
+
+	/*
+	 * esta seria otra forma quizas de perimetro y rectangulo public int
+	 * calculoPerimetro (Rectangulo esquinaSuperior,Rectangulo esquinaOpuesta) { int
+	 * perimetro=(esquinaSuperior.getX1() -
+	 * esquinaOpuesta.getX2())+(esquinaSuperior.getY1() - esquinaOpuesta.getY2());
+	 * return perimetro; }
+	 * 
+	 * public int calculoArea (Rectangulo esquinaSuperior,Rectangulo esquinaOpuesta)
+	 * { int area=(esquinaSuperior.getX2() - esquinaOpuesta.getX1()) *
+	 * (esquinaSuperior.getY2() - esquinaOpuesta.getY1()); return area; }
+	 * 
+	 */
+
+	@Override
+	public String toString() {
+		String aux = ("\n\nEstos son los puntos, la esquina superior  : " + esquinaSuperior.getX() + " y "
+				+ esquinaSuperior.getY());
+		aux = aux.concat("\n y la esquina opuesta " + esquinaOpuesta.getX() + " y " + esquinaOpuesta.getY());
+		aux = aux.concat("\n\n el perimetro del rectangulo será :" + this.Perimetro());
+		aux = aux.concat("\n\n el area del rectangulo será  :" + this.area());
+
+		return aux;
+	}
+
+}

@@ -1,0 +1,128 @@
+package cuenta;
+
+public class Dinero {
+
+	//atributos estaticos a nivel de clase, para todo objeto
+	private static final float DOLAR_A_EURO = 0.88f;
+	 private static final float EURO_A_DOLAR = 1.13f;
+	//atributos 
+	private float cantidad;
+	 private String divisa;
+	 //constructor
+	 public Dinero (float cantidad, String divisa) {		
+			this.cantidad=cantidad;	//pasa por valor
+			this.divisa=divisa;		//pasa por referencia	
+		}
+	 //ahora un caso de poliformismo usando el constructor Dinero lo uso para otra funcion
+	 //si no se especifica la divisa inicial, establecemos que es euro
+	/* public Dinero(float cantidad ) {
+	this.cantidad=cantidad;
+	this.divisa="EUR";
+	 }		*/
+	 //otra forma de hacer lo anterior, usando el cuarto tipo de this, pag.43 apuntes POO
+	 public Dinero(float cantidad) {	//esta llamada ha de ser en la primera linea 
+		 this(cantidad, "ERUR");
+	 }
+	 
+	public float obtenerCantidad() {	//creamos metodo obtener cantidad
+		return cantidad;		
+	}
+	public String obtenerDivisa ()	{		//creamos metodo obtener saldo
+		return divisa;
+	}
+	
+	public void doblar() {
+		//sumar el objeto consigo mismo
+		this.sumar(this);
+	}
+	
+	public void sumar (Dinero otroDinero) {
+		String miDivisa = this.divisa;				
+		String otraDivisa = otroDinero.divisa;	
+		this.igualarDivisa(otroDinero);
+	}
+	
+	
+	/* public void sumar (Dinero otroDinero)	{
+		 //si la divisa coincide sumo cantidades
+		String miDivisa = this.divisa;				//devuelve EUR
+		String otraDivisa = otroDinero.divisa;		//devuelve DOL
+		 if (miDivisa.equals(otraDivisa)) {
+		this.cantidad +=otroDinero.cantidad;
+		 }
+		 											//si no coinciden hago el cambio y despues sumo
+		 											//cambio de dolares a eUROS
+		 else if (miDivisa.equals("EUR") && otraDivisa.equals("DOL")) 	 {	 			 
+			 float cantidadConvertida = otroDinero.cantidad * DOLAR_A_EURO;		
+			 
+			 this.cantidad += cantidadConvertida;//this.cantidad es el atributo
+		 }
+		 											//hay que terminar el cambio de euros a dolares
+		 else if (miDivisa.equals("DOL") && otraDivisa.equals("EUR")){
+		 float cantidadConvertida = otroDinero.cantidad * DOLAR_A_EURO;
+		 
+		 }	 
+	 }*/
+	
+	public void restar(Dinero otroDinero) {
+													//copio el objeto para modificar sus valores sin que se alteren
+		Dinero inverso = new Dinero(otroDinero.cantidad * (-1), otroDinero.divisa);
+		
+		sumar(inverso);
+	}
+										//@Override
+	public String toString() {
+		//print (cantidad+" "+divisa)
+		return (cantidad+" "+divisa);
+	}
+	
+		
+														//vamos a crear igualar divisas
+		public Dinero igualarDivisa(Dinero otroDinero) 	{		
+			String miDivisa = this.divisa;				//this es el d1
+			String otraDivisa = otroDinero.divisa;		//otroDinero es el d2
+			
+			
+			if (miDivisa.equals(otraDivisa)) {			//las divisas son iguales no hay que hacer cambio de divisa
+				float cantidadIgualada= cantidad;				
+				return Dinero;
+				 }
+			//si las divisas son diferentes
+			else if (miDivisa.equals("EUR") && otraDivisa.equals("DOL")) 	 {	 			 
+				 float cantidadConvertida = otroDinero.cantidad * DOLAR_A_EURO;
+				miDivisa.equals("DOL");
+				 return cantidad;
+				 return divisa;
+				 
+			 }
+			 else if (miDivisa.equals("DOL") && otraDivisa.equals("EUR")){
+				 float cantidadConvertida = otroDinero.cantidad * DOLAR_A_EURO;
+				 miDivisa.equals("EUR");
+				 return cantidad;				 
+				 
+				 }
+			 public DineroIgualado (float cantidad, String divisa) {
+				 cantidad= cantidadIgualada;
+				 divisa = miDivisa;
+			 }
+		
+
+		}
+			
+			
+			
+			
+			
+			
+			
+			
+		
+
+
+	}
+	
+		
+
+	
+	
+

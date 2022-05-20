@@ -1,0 +1,23 @@
+package ejercicioCincoPuntoCuatro;
+
+public class PrincipalAnimalSalvaje {
+
+	public static void main(String[] args) {
+		
+		
+		/*public AnimalSalvaje( float weight, boolean bipedo, int vital, int clean) {		
+			this.weight = weight;
+			this.bipedo = bipedo; // hay que depurar si false=cuadrupedo
+			this.clean = clean;
+			this.vital = vital;
+		}*/
+		
+		
+		Mamifero elefante = new Mamifero(200,false,10,4) ;
+			
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package ejercicioCincoPuntoTresPOO;
+
+public class Frescos extends Producto {
+
+	String fechaEnvasado, paisOrigen ;
+	
+	public Frescos (String nombre,int lote, String caducidad,String fechaEnvasado, String paisOrigen) {			
+		super (nombre,lote,caducidad);
+		this.paisOrigen=paisOrigen;
+		this.fechaEnvasado=fechaEnvasado;		
+		
+	}
+	
+	public void setPaisOrigen(String pais) {
+		this.paisOrigen= pais;
+	}
+	public String getPaisOrigen () {
+		return paisOrigen;
+	}
+	
+	public void setEnvasado(int day,int month,int year) {
+		this.fechaEnvasado=fechaEnvasado;			
+	}
+	
+	/* public String getEnvasado() {
+		 int day=fechaEnvasado.getDay();
+		 int month= fechaEnvasado.getMonth();
+		 int year=fechaEnvasado.getYear();
+		 return day+"/"+month+"/"+year;
+	 }*/
+	
+}

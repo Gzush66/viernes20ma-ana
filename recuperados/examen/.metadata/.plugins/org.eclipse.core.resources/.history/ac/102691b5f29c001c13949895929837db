@@ -1,0 +1,41 @@
+package juanJesusLozanoMorenoExamenPOO;
+
+public class Estudiante {
+	
+	private String nombre;
+	private String dni;
+	private Asignatura codigo;
+	private Asignatura titulo;
+
+	
+	Estudiante(String nombre, String dni, Asignatura codigo, Asignatura titulo) {
+		super();
+		this.codigo=codigo;
+		this.titulo=titulo;
+	}
+	
+	Asignatura[]clase=new Asignatura[2];
+	
+	
+	
+	public String getNombre () {
+		return nombre;
+	}
+	public String getDni() {
+		return dni;
+	}
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	public void setDni (String dni) {
+		this.dni=dni;
+	}
+	public void  saludar()  {
+		System.out.println("Hola");
+		
+	}
+	
+	
+	
+
+}

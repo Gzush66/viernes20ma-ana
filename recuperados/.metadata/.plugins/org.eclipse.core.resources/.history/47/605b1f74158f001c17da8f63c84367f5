@@ -1,0 +1,74 @@
+package ejercicioCincoPuntoTresPOO;
+
+public class Congelados extends Producto {
+	
+			private float tempCongelacion;	
+			
+			public String codigoNacion(String paisOrigen) {
+			if (paisOrigen== "España") {
+				final String codNacional="ESP";
+				} 
+				else {
+				final  String codNacional="INTER";
+				}
+			}
+			
+			
+			
+			public  Congelados(String nombre,int lote ,String caducidad, float tempCongelacion, String paisOrigen) {
+				super (nombre,lote,caducidad);
+				this.tempCongelacion=tempCongelacion;
+				this.codNacional;
+					
+					
+			}
+				
+			public float getTempCong() {
+			return this.tempCongelacion;
+			}
+			
+			public void setTempCong (float tempCongelacion) {
+			this.tempCongelacion=tempCongelacion;
+			
+			}
+			String codNacional = null; 
+			
+				public void ProductosCongelados(int lote,String nombre,Date caducidad, float tempCongelacion, String paisOrigen) {
+					super (lote, nombre, caducidad);
+									
+					this.tempCongelacion=tempCongelacion;
+					this.codNacional=this.getCodNacional();
+					
+				}
+				
+				public String getCodNacional() {
+					if (this.getPaisOrigen()== "España") {
+						final String codNacional="ESP";
+					} 
+						else {
+						final  String codNacional="INTER";
+					}
+					
+					return codNacional;
+				}
+				public float getTempCong() {
+					return this.tempCongelacion;
+				}
+				
+				 public void setTempCong () {
+					 this.tempCongelacion=tempCongelacion;		
+				 }
+				 
+				  
+				 @Override
+					
+				 public String toString() {
+						return "Producto: "+this.nombre+"\n"+
+						"Fecha caducidad: "+this.getCaducidad()+"\n"+
+						"Numero de lote :"+this.lote+"\n"+
+						"Temperatura de congelacion recomendada :  "+this.getTempCong()+"\n"+
+						"Pais de procedencia : "+ this.codNacional+ "\n"+
+						"Numero de Registro Sanitario :  "+this.numeroRegistroSanitario;
+						
+			
+}

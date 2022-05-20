@@ -1,0 +1,55 @@
+ASEGÚRATE DE LEER ESTAS INSTRUCCIONES ANTES DE COMENZAR TU EXAMEN.
+
+Instrucciones y normas de la prueba:
+
+1. Crea un nuevo workspace para no tener ningún otro proyecto abierto. 
+Crea un paquete y nómbralo de tal forma que se quede: <nombreApellidos>Examen6b.java.
+
+2. NO podrás tener acceso a internet ni fuera de ordenador desde el momento que se indique hasta que 
+el profesor avise de que se puedan subir los proyectos a la tarea de Classroom. 
+En caso de detectar cualquier incidencia al respecto se anulará la prueba para el alumno. 
+
+Para ello, copia este enunciado y pégalo en un archivo Java en tu IDE.
+
+3. Al terminar tu examen debes comprimir tu proyecto Java en formato ZIP, avisar al profesor para subir el proyecto comprimido a internet. 
+Tras la prueba no puedes abandonar el aula ni tampoco podrás utilizar ningún medio de comunicación.
+
+4. Recuerda guardar frecuentemente los avances.
+
+5. Se valorará que el programa esté escrito de la manera más óptima, clara y eficiente.
+
+
+Implementar una Clase almacén, que contiene una colección de 
+productos  donde para cada uno se guardará:
+nombre, código, país y precio.
+
+
+Los productos son insertados mediante el método
+insertarProducto, que añade  siempre el
+producto  que se le pase sin importar su
+contenido (excepto si el objeto producto es null).
+
+
+Se tendrán que construir DE LA FORMA MAS ÓPTIMA los
+siguientes métodos para:
+
+
+1) eliminar todos los elementos que tengan un determinado
+país
+
+
+2) eliminar el último producto cuyo nombre coincida con el
+que se le pase a la función
+
+
+3) eliminar duplicados
+
+
+4) eliminar duplicados y además ordenarlos por nombre.
+
+
+ Existirá además un
+método buscador de productos por código, que construirá una colección que
+guarde para cada código la suma de todos los precios de productos que tienen
+ese código, y tras ello imprimirá cada código y cada suma de precios asociada,
+ordenando por código ascendente y después por suma de precios descendente

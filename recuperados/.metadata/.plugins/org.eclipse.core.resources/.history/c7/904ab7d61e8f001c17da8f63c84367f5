@@ -1,0 +1,22 @@
+package ejercicioCincoPuntoTresPOO;
+
+public class Refrigerados extends Producto {
+	
+	
+	private int numeroRegistroSanitario;
+	
+	public Refrigerados (String nombre,int lote, String caducidad, int numeroResgistroSanitario, int numeroRegistroSanitario) {
+		super (nombre,lote,caducidad);
+		this.numeroRegistroSanitario= numeroRegistroSanitario;
+	}
+	 public void setNumRegistro (int numeroRegistroSanitario) {
+		 this.numeroRegistroSanitario=numeroRegistroSanitario;
+	 }
+	
+	 public int getNumRegistro () {
+		 return numeroRegistroSanitario;
+	 }
+	
+	 	
+		
+}

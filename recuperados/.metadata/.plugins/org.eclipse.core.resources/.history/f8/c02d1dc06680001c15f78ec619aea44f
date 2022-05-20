@@ -1,0 +1,63 @@
+package departamentoUML;
+
+public class Empleado {
+	
+	//el empleado tiene un nombre
+		private String nombre;
+	//el empleado tiene unos atributos	
+		private Empleado jefe;
+		private Empleado subordinado;
+		private Departamento departamento;
+		private Empleado edad;
+		
+		
+		
+	//por eleccion no pondremos esta 
+	//xq normalmente un empleado no direge un departamento 
+	//y estaria vacia casi siempre vacia
+		
+		//private Departamento departamentoDirigido;
+
+	//metodo constructor
+				public Empleado (String nombre , Departamento departamento) {
+			this.nombre = nombre;				
+			this.jefe = null;
+			this.subordinado = null;
+			this.departamento = departamento;
+		}
+				
+		public void setNombre() {
+			this.nombre=nombre;
+		}
+		public void setDepartamenteo() {
+			this.departamento=departamento;
+		}
+		public void setJefe() {
+			this.jefe=jefe;
+		}
+		
+		public void setSubordinado() {
+			this.subordinado=subordinado;
+		}
+		
+		
+		public String getNombre() {
+			return this.nombre;
+		}
+		
+		public String getJefe() {
+			return this.jefe;			
+		}
+		public String getSubordinado() {
+			return this.subordinado;
+		}
+		public String  getDepartamento() {
+			return this.departamento;
+		}
+	
+		
+		// TODO Auto-generated method stub
+
+	}
+
+

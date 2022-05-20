@@ -1,0 +1,42 @@
+package examenColeciones6;
+
+import java.util.Scanner;
+
+public class RecorrerPalabraHashMap {
+	
+/*	String str = "texto aquí";
+
+	for (int n = 0, n <str.length (); n + +) { 
+		char c = str.charAt (n);
+		System.out.println (c); }
+
+	
+	String str = "texto aquí";
+
+	for (int n = str.length () -1, n> = 0;
+			n -) { char c = str.charAt (n);
+			System.out.println (c); }
+}
+
+
+CharacterIterator str_it = new StringCharacterIterator ("texto aquí");
+
+for (char c = str_it.first ();
+		c = CharacterIterator.DONE;
+		! str_it.next c = ()) {
+	System.out.println (c); }
+
+*/
+
+ private Scanner in;
+in = sc.new Scanner (System.in);
+
+        String myString = "Hello Friends";
+        char[] chars = myString.toCharArray();
+        int len = chars.length;
+        System.out.println("length of the char array: "+len);
+        for (char ch : chars) {
+            System.out.println(ch);
+        }
+    }
+}

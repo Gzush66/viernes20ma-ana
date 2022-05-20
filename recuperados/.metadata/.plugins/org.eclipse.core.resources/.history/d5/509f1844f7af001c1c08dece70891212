@@ -1,0 +1,23 @@
+package examenColeciones6;
+
+import java.util.Scanner;
+
+public class RecorrerPalabraHashMap {
+	
+	
+	
+	Scanner scString = new Scanner (System.in);
+	
+	
+	System.out.println("Introduzca una palabra:");
+	String myString=scString.nextLine();
+
+       
+        char[] chars = myString.toCharArray();
+        int len = chars.length;
+        
+        System.out.println("length of the char array: "+len);
+        for (char ch : chars) {
+            System.out.println(ch);
+        }
+    }

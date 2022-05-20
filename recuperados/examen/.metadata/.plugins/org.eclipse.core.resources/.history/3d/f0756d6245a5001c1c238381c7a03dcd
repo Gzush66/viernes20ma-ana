@@ -1,0 +1,69 @@
+package juanJesusLozanoMorenoExamenPOO;
+import java.util.ArrayList;
+
+public class Profesor extends Personal {
+	private final static int NUM_ASIG_PROF =3;
+	
+	
+	
+	private Asignatura[]asignaturas;
+			public Profesor(String nombre,String dni,int salario,Asignatura[] asignaturas) {
+				super(nombre,dni,salario);
+				this.asignaturas = new Asignatura[NUM_ASIG_PROF];	
+			}
+				
+				
+			public Profesor(String nombre, String dni,String salario) {
+				this(nombre, dni, salario, null);
+			}	
+			
+			
+			public Asignatura getAsignatura(int index) {
+				return this.asignaturas[index];
+			}
+			
+				
+			
+			
+			public void setAsignatura(Asignatura asignatura, int index) {
+				this.asignaturas[index] = asignatura;
+			}
+				
+			
+	
+	
+	
+	
+	public void impartir(Asignatura titulo,Asignatura codigo) {
+	
+		
+	}
+		
+	@Override
+	public void  saludar()  {
+		System.out.println("Buenos dias");		
+	}
+	
+	@Override
+	public String toString() {
+		String aux = ("\nEl nombre del profesor es " + 
+				this.nombre + ", \nsu DNI es " + 
+				this.dni + ", \nsu salario es de " + 
+				this.getSalario() + "\nImparte:\n");
+		for(int i = 0; i < (asignaturas.length); i++) {
+			aux+= i+") "+asignaturas[i];
+			aux = aux.concat("\n");
+		}
+		return aux;
+		
+		@Override
+		public String toString() {
+			String aux=("\n El nombre del profesor es"+
+		this.nombre+",\n su DNI ES"+
+		this.dni+ "\n su salario es de "+
+		this.getSalario()  + "\n ");
+					
+		}
+	
+	
+}

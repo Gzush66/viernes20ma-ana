@@ -1,0 +1,7 @@
+#
+# archivos binarios y demas
+*.class
+/bin
+/class
+*.classpath
+*.zip

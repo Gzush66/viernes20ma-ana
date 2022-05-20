@@ -1,0 +1,49 @@
+package juanJesusLozanoMorenoExamenPOO;
+
+public class Profesor extends Personal {
+
+	
+
+	Profesor(String nombre,String dni,int salario,Asignatura asignatura){
+		super(nombre,dni, salario);	
+		this.asignatura=asignatura;
+	}
+	
+	
+	
+	public String getNombre () {
+		return nombre;
+	}
+	public String getDni() {
+		return dni;
+	}
+	public float getSalario() {
+		return salario;
+	}
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	public void setDni (String dni) {
+		this.dni=dni;
+	}
+	public void setSalario(float salario) {
+		this.salario=salario;
+	}
+	public String getAsignatura() {
+		return asignatura();
+	}
+	
+	
+	public void impartir(Asignatura titulo,Asignatura codigo) {
+	
+		
+	}
+		
+	@Override
+	public void  saludar()  {
+		System.out.println("Buenos dias");
+		
+	}
+	
+	
+}

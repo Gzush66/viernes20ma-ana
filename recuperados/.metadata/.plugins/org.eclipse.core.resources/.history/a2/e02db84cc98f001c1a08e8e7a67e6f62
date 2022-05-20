@@ -1,0 +1,51 @@
+package ejercicioCincoPuntoTresUno;
+import java.util.Scanner;
+
+public class PrincipalProductos {
+
+	public static void main(String[] args) {
+		
+	/*Scanner sc=new Scanner (System.in);
+	System.out.println("Introduzca el producto :");
+	String producto=sc.nextLine();
+	System.out.println("Introduzca el lote del producto :");
+	String lote=sc.nextLine();
+	System.out.println("Introduzca la fecha de caducidad del producto :");
+	String caducidad=sc.nextLine();
+	System.out.println("Introduzca la fecha de envasado :");
+	String envasado=sc.nextLine();
+	System.out.println("introduzca el pais de origen :");
+	String pais=sc.nextLine();
+	System.out.println("Introduzca el Nº de Resgistro Sanitario :");
+	int rss=sc.nextInt();
+	System.out.println("Introduzca la Temperatura Optima de Congelacion : ");
+	String  tempe=sc.nextLine();
+	*/
+	
+	
+	
+	
+	
+	Producto aguacate = new Producto ("aguacate",001010,"25/10/2022");
+	System.out.println(aguacate);
+	Frescos patata= new Frescos ("patata",001021,"25/10/2022","10/02/2022","españa");
+	System.out.println(patata);
+	Refrigerados boqueron=new Refrigerados("boqueron",001022,"25/10/2022",952001254 );
+	System.out.println(boqueron);
+	Congelados fletan =new Congelados("fletan",001023,"25/10/2022",-25,"canada");
+	System.out.println(fletan);
+	
+			
+		
+	/*    
+	 * línea 35: algo parecido con errores sintácticos. Prueba por ejemplo con poner los parametros correctos:
+Congelados fletan =new Congelados("fletan",001023,"25/10/2022",-25,"Pais");
+public  Congelados(String nombre,int lote ,String caducidad, float tempCongelacion, String paisOrigen) {
+	 * */	
+		
+		
+		
+		
+		
+	}
+}

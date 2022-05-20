@@ -1,0 +1,24 @@
+package ejercicioCincoPuntoCuatro;
+
+public class Reptil extends AnimalSalvaje {
+
+	private Escama escama;
+
+	public Reptil(String name, float weight, boolean bipedo, int vital, int clean, Escama escama) {
+		super(name, weight, bipedo, vital, clean);
+		this.escama = escama;
+
+	}
+
+	public void aseoReptil(Escama escama, int vital, int clean) {
+		System.out.println(this.clean);
+		if (this.escama.getSize().equals(TamañoEscama.GRANDE)) {
+			clean = clean + 2;
+		}
+		if (this.escama.getSize().equals(TamañoEscama.PEQUEÑA)) {
+			clean = clean + 1;
+		}
+		System.out.println(this.clean);
+	}
+
+}

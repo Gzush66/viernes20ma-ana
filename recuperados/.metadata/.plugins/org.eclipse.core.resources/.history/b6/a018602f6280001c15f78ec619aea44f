@@ -1,0 +1,27 @@
+package departamentoUML;
+
+public class Empleado {
+	
+	
+		private String nombre;
+		
+		private Empleado jefe;
+		private Empleado subordinado;
+		private Departamento departamento;
+
+	
+		public Empleado (String nombre , Departamento departamento) {
+			this.nombre = nombre;				
+			this.jefe = null;
+			this.subordinado = null;
+			this.departamento = departamento;
+		}
+		
+		
+	
+		
+		// TODO Auto-generated method stub
+
+	}
+
+
